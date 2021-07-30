@@ -48,12 +48,16 @@ I took a look in Nuxt.js, Vue CLi and Vue 3 (Vite) frameworks/tools, created a p
 
 ### Install Tailwind CSS
 
-Install via npm (30 minutes)
+Install via npm. (30 minutes)
 
 ### Initialize a prettier config
 
-Get a standard prettier config file (1 minute)
+Get a standard prettier config file. (1 minute)
 
 ### Set Vue DevTools
 
-Install Vue DevTools Extension in chrome and set app.config.performance = true (1 hour)
+Install Vue DevTools Extension in chrome and set app.config.performance = true. (1 hour)
+
+### Show the right names of the components in DevTools
+
+Have to fine where to set the name of the component before it is being created. (30 minutes)
