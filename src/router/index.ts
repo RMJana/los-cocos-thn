@@ -50,6 +50,40 @@ const routes: Array<RouteRecordRaw> = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "" */ '../views/Contact.vue'),
   },
+  {
+    path: '/termsandconditions',
+    name: 'TermsAndConditions',
+    // route level code-splitting
+    // this generates a separate chunk (termsandconditions.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(/* webpackChunkName: "" */ '../views/TermsAndConditions.vue'),
+  },
+  {
+    path: '/privacypolicy',
+    name: 'PrivacyPolicy',
+    // route level code-splitting
+    // this generates a separate chunk (privacypolicy.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(/* webpackChunkName: "" */ '../views/PrivacyPolicy.vue'),
+  },
+  {
+    path: '/aboutus',
+    name: 'AboutUs',
+    // route level code-splitting
+    // this generates a separate chunk (aboutus.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "" */ '../views/AboutUs.vue'),
+  },
+  {
+    path: '/partners',
+    name: 'Partners',
+    // route level code-splitting
+    // this generates a separate chunk (contact.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "" */ '../views/Partners.vue'),
+  },
 ];
 
 const router = createRouter({

@@ -9,8 +9,21 @@
     <router-link to="/contact">Contact</router-link>
   </div>
   <router-view />
-  <footer id="footer">hello i am a footer</footer>
+  <Footer/>
 </template>
+
+<script lang="ts">
+import { Options, Vue } from "vue-class-component";
+import Footer from "@/components/Footer.vue"; // @ is an alias to /src
+
+@Options({
+  name: "App",
+  components: {
+    Footer,
+  },
+})
+export default class Weddings extends Vue {}
+</script>
 
 <style lang="scss">
 
@@ -24,14 +37,6 @@
   margin:0;
   display: flex;
   flex-direction: column;
-}
-
-
-#nav {
-  display: flex;
-  padding: 30px;
-  justify-content: space-around;
-
   a {
 
     color: #b4bbc2;
@@ -43,11 +48,16 @@
     }
   }
 }
+
+
+#nav {
+  display: flex;
+  padding: 30px;
+  justify-content: space-around;
+
+}
 #loscocos {
  height: 2rem;
 }
 
-#footer{
-  margin-top:auto;
-}
 </style>

@@ -73,3 +73,7 @@ Build a logo png file, to include it in the navi.(40min)
 
 Modify App-css in other to make it flex.
 Distribute space for Nav, Router-view and Footer, in order to keef Nav in the upper part of the page, Router-View in the middle and Footer immer in the bottom. (10min)
+
+### Implement Navi and WorkInProgressView
+
+Include all elements of the Nav, add them to the router, build a WorkInProgress Component for all the elements in Nav that don't have a view. (80min)
