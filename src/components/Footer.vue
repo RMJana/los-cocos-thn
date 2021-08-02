@@ -8,13 +8,18 @@
         <router-link to="/partners">Partners</router-link>
        </div>
        <div>
-        <a href = "mailto: reservations@loscocosbungalows.com">reservations@loscocosbungalows.com</a>
-        <a href="tel:+34982458720">Tlf: +34 982 458 720</a>
+
+        <a id="email" href = "mailto: reservations@loscocosbungalows.com">reservations@loscocosbungalows.com</a>
+        <a id="tel" href="tel:+34982458720">Tlf: +34 982 458 720</a>
+       <div>
+
         <fa icon="rss"/>
         <fa :icon="['fab', 'facebook-square']"/>
         <fa :icon="['fab', 'instagram']"/>
         <fa :icon="['fab', 'twitter']"/>
        </div>
+       </div>
+       
     </footer>
 </template>
 
@@ -39,9 +44,23 @@ export default class Footer extends Vue {
     margin: 5px;
   }
 }
-svg{
+#footer svg{
   color: #b4bbc2;
+  display: block;
+  margin: auto;
+  padding: 5px;
+}
+#footer #email,#footer #tel {
+  color: #0e76cc;
+}
+#footer a{ display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;}
+#footer div{
+  display: flex;  
 }
 
+  
 </style>
 

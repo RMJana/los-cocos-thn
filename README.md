@@ -77,3 +77,11 @@ Distribute space for Nav, Router-view and Footer, in order to keef Nav in the up
 ### Implement Navi and WorkInProgressView
 
 Include all elements of the Nav, add them to the router, build a WorkInProgress Component for all the elements in Nav that don't have a view. (80min)
+
+### Implement Footer
+
+Implement Views for links in footer
+Implement email and telefone link (30min)
+Install Font Awesome Icons
+Implement Icons (30min)
+Implement Styling (1hour)
