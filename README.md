@@ -90,4 +90,4 @@ Implement Styling (1hour)
 
 Divide view in flex containers
 Generate Components
-Find datepicker component, implement and adapt styling (2hours30min)
+Find datepicker component, implement and adapt styling (3hours)
