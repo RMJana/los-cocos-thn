@@ -85,3 +85,9 @@ Implement email and telefone link (30min)
 Install Font Awesome Icons
 Implement Icons (30min)
 Implement Styling (1hour)
+
+### Implement Home-Reservations View
+
+Divide view in flex containers
+Generate Components
+Find datepicker component, implement and adapt styling (2hours30min)
