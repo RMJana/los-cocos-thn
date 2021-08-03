@@ -26,17 +26,17 @@ export default class Weddings extends Vue {}
 </script>
 
 <style lang="scss">
-
-#app {
+#app{
   font-family: 'Dosis', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+  }
+#nav {
   text-align: center;
   color: #2c3e50;
-  height: 100vh;
   margin:0;
   display: flex;
-  flex-direction: column;
   a {
 
     color: #b4bbc2;

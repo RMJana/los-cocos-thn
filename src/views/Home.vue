@@ -3,7 +3,7 @@
     <Reservation msg="Reservations"/>
     <div class="bottom">
       <RoomRates msg="Room Rates"/>
-      <ReservationSummary msg="Reservation Summary"/>
+      <ReservationSummary  msg="Reservation Summary"/>
     </div>
   </div>
 </template>

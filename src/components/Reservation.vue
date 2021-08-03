@@ -72,14 +72,13 @@ export default class Reservation extends Vue {
 
 .form-reservation{
   display: flex;
-  justify-content: space-around;
+  padding: 0px 31rem;
+  justify-content: space-evenly;
   flex-basis: 100%;
   background: rgb(14,118,204, 0.5);
   height: 4rem;
   align-items: center;
-  *{
-    margin-left: 1rem;
-  }
+  
 }
 
 .v3dp__datepicker{
@@ -116,10 +115,10 @@ input{
     background:rgba(22, 107, 177);
     font-family: 'Dosis', sans-serif;  
     border: rgba(22, 107, 177);
-    height: 2rem;
+    height: 1.8rem;
     font-size: 1rem;
     color: #ffffff;
-    padding: 0 2rem;
+    padding: 0 3rem;
   }
 
   

@@ -1,31 +1,26 @@
 <template>
   <div class="room-rates">
-    <h1>{{ msg }}</h1>
-    <div>
-      <h2>Room 1</h2>
-      <img id="room1" src="../assets/room_1.png" alt="room1"/>
+    <div id="room-rates-title">
+      <h1>Rooms	&amp; Rates</h1>
+      <h3>Plan your perfect stay at our hotel</h3>
+      <img id="reservation-workflow" src="../assets/los-cocos-1.png" alt="reservation-workflow"/>
     </div>
-    <div>
-      <h2>Room 2</h2>
-      <img id="room2" src="../assets/room_2.png" alt="room2"/>
-    </div>
-    <div>
-      <h2>Room 3</h2>
-      <img id="room3" src="../assets/room_3.png" alt="room3"/>
+    <div id="rooms-and-rates">
+      <Rooms />
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from "vue-class-component";
-import Room from "@/components/Room.vue";
+import Rooms from "@/components/Rooms.vue";
 
 @Options({
   name:"RoomRates",
   props: {
     msg: String,
   },
-  components:{Room}
+  components:{Rooms}
 })
 export default class RoomRates extends Vue {
   msg!: string;
@@ -33,10 +28,23 @@ export default class RoomRates extends Vue {
 </script>
 
 <style lang="scss">
-.rooms-rates{
+
+.room-rates{
   display:flex;
   flex-direction: column;
-  overflow: scroll;
+  flex-basis: 60%;
+}
+
+#room-rates-title{
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 12rem;
+}
+#rooms-and-rates{
+  display:flex;
+  flex-direction: column;
+  overflow: auto;
 }
 </style>
 

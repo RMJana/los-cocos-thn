@@ -91,3 +91,7 @@ Implement Styling (1hour)
 Divide view in flex containers
 Generate Components
 Find datepicker component, implement and adapt styling (3hours)
+Try several libraries for select-dropdown component, implement Dropdownselect from scracht, modify Button and styling (2hours 30min)
+Investigate why image src binding is not working solutions: use require('../assets/room_1.png') pro image is also not working (2hours)
+Found a work-around using v-if/v-else-if/v-else (15min)
+Implement Room & Rates section and styling (3hours)
