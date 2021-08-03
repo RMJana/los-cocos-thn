@@ -2,7 +2,7 @@
   <div class="reservation">
     <div class="form-reservation">
       <Datepicker v-model="pickedFrom" />
-      <Datepicker v-model="pickedUntil" />
+      <Datepicker v-model="pickedUntil"/>
     </div>
   </div>
 </template>
@@ -23,7 +23,7 @@ import { ref } from 'vue'
 
     return {
       pickedFrom : ref(new Date()),
-      pickedUntil: ref(new Date()),
+      pickedUntil: ref(new Date(new Date().getTime()+(5*24*60*60*1000))),
     };
   },
   components:{Datepicker},
@@ -57,13 +57,30 @@ export default class Reservation extends Vue {
   margin-top: 2rem;
  
 }
+
+.v3dp__datepicker{
+  --elem-hover-bg-color: var(--vdp-hover-bg-color, #0e76cc); 
+  --elem-selected-bg-color: var(--vdp-selected-bg-color, #0e76cc);
+*{
+  font-family: 'Dosis', sans-serif;  
+  }
+}
 .v3dp__input_wrapper{ 
-  margin-top: 1.5rem;
+  margin-top: 1.25rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
+ 
   }
+
+  input{
+    display: inline-block;
+    height: 1.5rem;
+    border: #ffffff;
+  }
+
+  
 
 
  
