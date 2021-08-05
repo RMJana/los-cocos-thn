@@ -2,8 +2,8 @@
 <div id="reservation-summary-container">
     <div class="reservation-summary">
       <div id="summary">
-        <h1>{{ msg }}</h1>
-        <h2>Mini Dreamy Room</h2>
+        <h1>Reservation Summary</h1>
+        <h2>{{$store.state.roomName}}</h2>
         <div id="checking">
           <div>
             <h4 id="h4-reservation">Check in</h4>
@@ -15,13 +15,18 @@
           </div>
         </div>
         <h4 id="h4-reservation">Reservation date</h4>
-        <p id="p-reservation">From 05-09-2021 Until 16-09-2021</p>
+        <p id="p-reservation">From {{$store.state.reservationDateFrom.toISOString().substring(0,10)}} Until {{$store.state.reservationDateUntil.toISOString().substring(0,10)}}</p>
         <h4 id="h4-reservation">People</h4>
-        <p id="p-reservation">2 Adults</p>
+        <p id="p-reservation">{{$store.state.adults}} Adults</p>
+        <p v-if="$store.state.children === '1'" id="p-reservation">{{$store.state.children}} Child</p>
+        <p v-else id="p-reservation">{{$store.state.children}} Children</p>
+      
+        
+
       </div>
       <div id="total">
         <h2>Total</h2>
-        <h2>€200</h2>
+        <h2>{{$store.state.roomPrice}}</h2>
       </div>
       <div id="save-button">
         <button @click="()=>{}">Save</button>
@@ -36,12 +41,10 @@ import { Options, Vue } from "vue-class-component";
 
 @Options({
   name:"ReservationSummary",
-  props: {
-    msg: String,
-  },
+  
 })
 export default class ReservationSummary extends Vue {
-  msg!: string;
+ 
 }
 </script>
 

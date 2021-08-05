@@ -1,18 +1,19 @@
 <template>
   <div class="reservation">
     <div class="form-reservation">
-      <Datepicker v-model="pickedFrom" />
-      <Datepicker v-model="pickedUntil"/>
+      <Datepicker v-model="$store.state.reservationDateFrom" />
+      <Datepicker v-model="$store.state.reservationDateUntil"/>
       <div id="select">
       <span>Adults: </span>
-      <select v-model="selectedAdult">
+      <select v-model="$store.state.adults">
         <option>1</option>
         <option>2</option>
       </select>
       </div>
       <div  id="select">
         <span>Children: </span>
-      <select v-model="selectedChild">
+      <select v-model="$store.state.children">
+        <option>0</option>
         <option>1</option>
         <option>2</option>
       </select>
@@ -27,34 +28,17 @@
 <script lang="ts">
 import { Options,  Vue } from "vue-class-component";
 import Datepicker from 'vue3-datepicker';
-import { ref } from 'vue';
-
-
 
 @Options({
   name:"Reservation",
   props: {
     msg: String,
   },
-  data() { 
-
-    return {
-      pickedFrom : ref(new Date()),
-      pickedUntil: ref(new Date(new Date().getTime()+(24*60*60*1000))),
-      selectedAdult: "1",
-      selectedChild: "Child(1)",
-    };
-  },
   components:{Datepicker},
   
 })
 
 export default class Reservation extends Vue {
-  msg!: string;
-  pickedFrom!: Date;
-  pickedUntil!: Date;
-  selectedAdult!: string;
-  selectedChild!: string;
 }
 </script>
 

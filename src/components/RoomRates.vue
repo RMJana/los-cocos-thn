@@ -12,7 +12,7 @@
     </div>
     <div id="rooms-and-rates">
       <Rooms />
-      <ReservationSummary  msg="Reservation Summary"/> 
+      <ReservationSummary /> 
     </div>
   </div>
 </template>

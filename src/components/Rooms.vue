@@ -1,6 +1,6 @@
 <template>
   <div id="rooms">
-      <div id="room-box"  v-for="image in images" :key="image.name" >
+      <div id="room-box" v-for="image in images" :key="image.name" >
         <div id="room">
           <div id="room-image">
             <img v-if="image.id === 'room1'" id="room2" src="../assets/room_1.png"  alt="room2"/>
