@@ -93,7 +93,8 @@ interface Image {
 })
 export default class Room extends Vue {
   images!: Array<Image>;
-  
+  promoCode!: number;
+  calculateFinalPrice!: (promoCode: number, originalPrice: number) => number
 }
 </script>
 
