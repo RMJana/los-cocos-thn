@@ -112,6 +112,7 @@ input{
     }
   }
   div button{
+    font-weight: bold;
     background:rgba(22, 107, 177);
     font-family: 'Dosis', sans-serif;  
     border: rgba(22, 107, 177);

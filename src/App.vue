@@ -30,7 +30,7 @@ export default class Weddings extends Vue {}
   font-family: 'Dosis', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
+  box-sizing: border-box;
   }
 #nav {
   text-align: center;

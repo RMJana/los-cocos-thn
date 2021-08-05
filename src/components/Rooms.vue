@@ -88,9 +88,6 @@ export default class Room extends Vue {
 </script>
 
 <style lang="scss">
-#rooms{
-  margin-top: 3rem;
-}
 
 #room-box{
   flex-basis: 100%;
@@ -105,7 +102,6 @@ export default class Room extends Vue {
   border-left: 1px solid #b4bbc2;
   border-top: 1px solid #b4bbc2;
   justify-content: space-around;
-  margin-left: 3rem;
 }
 
 #room:hover {
@@ -115,7 +111,7 @@ export default class Room extends Vue {
 }
 
 #room-image{
-  margin-left: -12rem;
+  margin-left: -3rem;
   
 }
 
