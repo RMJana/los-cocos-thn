@@ -1,7 +1,7 @@
 <template>
   <div id="rooms">
-      <div id="room-box" v-for="image in images" :key="image.name" >
-        <div id="room">
+      <div  id="room-box" v-for="image in images" :key="image.name" >
+        <div @click="$store.commit('setRoom', {name:image.name,price: image.price})" id="room">
           <div id="room-image">
             <img v-if="image.id === 'room1'" id="room2" src="../assets/room_1.png"  alt="room2"/>
             <img v-else-if="image.id === 'room2'" id="room2" src="../assets/room_2.png"  alt="room2"/>
@@ -21,18 +21,22 @@
               <div>
                 People: {{image.people}}
               </div>
-              <div id="price">
-                {{image.price}}
+              <div v-if="promoCode > 0" id="prices">
+                <h2 id="original-price">€{{image.price}}</h2>
+                <h2>€{{calculateFinalPrice(promoCode,image.price)}}</h2>
               </div>
+              <div v-else id="price">
+                €{{image.price}}
+              </div>  
             </div> 
           </div>
         </div>
-        
       </div>
   </div>
 </template>
 
 <script lang="ts">
+import { ref } from "vue";
 import { Options, Vue } from "vue-class-component";
 
 interface Image {
@@ -42,13 +46,13 @@ interface Image {
           size: string,
           beds: string,
           people: string,
-          price: string,
+          price: number,
          }
 @Options({
   name:"Room",
   data(){
     return{
-      src : "require('../assets/room_1.png')",
+      promoCode: ref(this.$route.params.promo_code.toString().replace("promo_code=","")),
       images:[
         {
           id: "room1",
@@ -57,7 +61,7 @@ interface Image {
           size: "20m2",
           beds: 1,
           people: 2,
-          price: "€200",
+          price: 200,
         },
         {
           id: "room2",
@@ -66,7 +70,7 @@ interface Image {
           size: "50m2",
           beds: 1,
           people: 2,
-          price: "€350",
+          price: 350,
         },
         {
           id: "room3",
@@ -75,15 +79,21 @@ interface Image {
           size: "125m2",
           beds: 3,
           people: 4,
-          price: "€450",
+          price: 450,
         }
       ]
+    }
+  },
+ 
+  methods:{
+    calculateFinalPrice(promoCode: number, originalPrice: number){
+      return (originalPrice - (originalPrice*promoCode/100))
     }
   }
 })
 export default class Room extends Vue {
   images!: Array<Image>;
-  src!: string;
+  
 }
 </script>
 

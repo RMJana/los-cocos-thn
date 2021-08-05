@@ -99,7 +99,14 @@ Implement Reservation Summery and styling (1hour)
 
 ### Modify router to accept optional param
 
-Modify the router in order to accept an optional promo_code param (15min)
+Modify the router in order to accept an optional promo_code param
+Try to change param in the path of the route for query optional but having problems to get the router to calculate the root path.
+Decided to design /:promo_code\* which makes it optional, in addition the promo_code can be called like following:
+
+http://localhost:8080/promo_code=10
+
+http://localhost:8080/10
+(3hours)
 
 ### Initialize and Set Vuex Store
 
@@ -108,3 +115,5 @@ Analize pros and cons from using Vuex and $emit. Because Vuex is built in with V
 Initialize and link components to the Vuex Store (2hours)
 
 Due to the fact that our components are linked to the store and it will be updated as soon there is a change, we can make our web more user friendly and save the user one click on the button "Modify". Any changes in the reservation would be updated in "Reservation Summary" as soon as the user makes the change.
+
+### Add

@@ -29,9 +29,26 @@
         <p v-if="$store.state.children === '1'" id="p-reservation">{{$store.state.children}} Child</p>
         <p v-else id="p-reservation">{{$store.state.children}} Children</p>
       </div>
-      <div id="total">
+      <div v-if="promoCode > 0">
+        <div class="total">
+          <h3 >Promo Code</h3>
+          <h3 >{{promoCode}}%</h3>
+        </div>
+        <div class="total">
+          <h3 >Discount</h3>
+          <h3>€{{$store.state.roomPrice - calculateFinalPrice(promoCode,$store.state.roomPrice)}}</h3>
+        </div>
+        
+      </div>
+      <div class="total-price total">
         <h2>Total</h2>
-        <h2>{{$store.state.roomPrice}}</h2>
+        <div  v-if="promoCode > 0"  id="prices">
+          <h2 id="original-price">€{{$store.state.roomPrice}}</h2>
+          <h2>€{{calculateFinalPrice(promoCode,$store.state.roomPrice)}}</h2>
+        </div>
+        <div v-else>
+          <h2>€{{$store.state.roomPrice}}</h2>
+        </div>
       </div>
       <div id="save-button">
         <button @click="$store.commit('setRerservation')">Save</button>
@@ -42,15 +59,26 @@
 </template>
 
 <script lang="ts">
+import { ref } from "vue";
 import { Options, Vue } from "vue-class-component";
 
 @Options({
   name:"ReservationSummary",
+  data(){
+    return {
+      promoCode: ref(this.$route.params.promo_code.toString().replace("promo_code=",""))
+    }
+  },
+  methods:{
+    calculateFinalPrice(promoCode: number, originalPrice: number){
+      return (originalPrice - (originalPrice*promoCode/100))
+    }
+  }
   
 })
 export default class ReservationSummary extends Vue {
- 
- 
+  promoCode!: number;
+  calculateFinalPrice!: (promoCode: number, originalPrice: number) => number
 }
 </script>
 
@@ -93,14 +121,24 @@ export default class ReservationSummary extends Vue {
   margin: 0rem;
   margin-top: 1rem;
 }
-#total{
+.total{
   margin-top: 1rem;
-  border-top: 1px solid #b4bbc2;
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
-
+.total-price{
+    border-top: 1px solid #b4bbc2;
+}
+#prices{
+  display: flex;
+  flex-direction: row;
+}
+#original-price{
+  color: #a1a5a8;
+  margin-right: 1rem;
+}
 div button{
     font-weight: bold;
     background:rgba(22, 107, 177);

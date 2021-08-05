@@ -7,7 +7,7 @@ export default createStore({
     reservationDateUntil: new Date(new Date().getTime() + 24 * 60 * 60 * 1000),
     adults: '2',
     children: '2',
-    roomPrice: 'No price jet',
+    roomPrice: 0,
   },
   mutations: {
     setRerservation(state) {
