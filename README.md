@@ -100,3 +100,11 @@ Implement Reservation Summery and styling (1hour)
 ### Modify router to accept optional param
 
 Modify the router in order to accept an optional promo_code param (15min)
+
+### Initialize and Set Vuex Store
+
+Analize pros and cons from using Vuex and $emit. Because Vuex is built in with Vue CLI and our app is devided into several levels of components we implement Vuex Store. (1hour)
+
+Initialize and link components to the Vuex Store (2hours)
+
+Due to the fact that our components are linked to the store and it will be updated as soon there is a change, we can make our web more user friendly and save the user one click on the button "Modify". Any changes in the reservation would be updated in "Reservation Summary" as soon as the user makes the change.

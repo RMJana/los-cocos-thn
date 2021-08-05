@@ -1,8 +1,8 @@
 <template>
   <div class="reservation">
     <div class="form-reservation">
-      <Datepicker v-model="$store.state.reservationDateFrom" />
-      <Datepicker v-model="$store.state.reservationDateUntil"/>
+      <Datepicker inputFormat="dd-MM-yyyy" v-model="$store.state.reservationDateFrom" />
+      <Datepicker inputFormat="dd-MM-yyyy" v-model="$store.state.reservationDateUntil"/>
       <div id="select">
       <span>Adults: </span>
       <select v-model="$store.state.adults">
@@ -17,9 +17,6 @@
         <option>1</option>
         <option>2</option>
       </select>
-      </div>
-      <div>
-          <button @click="()=>{}">Modify</button>
       </div>
     </div>
   </div>
@@ -95,22 +92,5 @@ input{
       margin-left: 0.2rem;
     }
   }
-  div button{
-    font-weight: bold;
-    background:rgba(22, 107, 177);
-    font-family: 'Dosis', sans-serif;  
-    border: rgba(22, 107, 177);
-    height: 1.8rem;
-    font-size: 1rem;
-    color: #ffffff;
-    padding: 0 3rem;
-  }
-
-  
-
-
- 
-
-
 </style>
 

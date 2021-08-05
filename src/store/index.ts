@@ -5,28 +5,17 @@ export default createStore({
     roomName: 'No selected room jet',
     reservationDateFrom: new Date(),
     reservationDateUntil: new Date(new Date().getTime() + 24 * 60 * 60 * 1000),
-    adults: '1',
-    children: '1',
+    adults: '2',
+    children: '2',
     roomPrice: 'No price jet',
   },
   mutations: {
-    setRoomName(state, payload) {
-      state.roomName = payload;
+    setRerservation(state) {
+      console.log(state);
     },
-    setReservationDateFrom(state, payload) {
-      state.reservationDateFrom = payload;
-    },
-    setReservationDateUntil(state, payload) {
-      state.reservationDateUntil = payload;
-    },
-    setAdults(state, payload) {
-      state.adults = payload;
-    },
-    setChildren(state, payload) {
-      state.children = payload;
-    },
-    setRoomPrice(state, payload) {
-      state.roomPrice = payload;
+    setRoom(state, payload) {
+      state.roomName = payload.name;
+      state.roomPrice = payload.price;
     },
   },
   actions: {},

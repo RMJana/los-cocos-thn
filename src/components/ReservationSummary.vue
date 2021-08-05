@@ -1,3 +1,4 @@
+
 <template>
 <div id="reservation-summary-container">
     <div class="reservation-summary">
@@ -15,21 +16,25 @@
           </div>
         </div>
         <h4 id="h4-reservation">Reservation date</h4>
-        <p id="p-reservation">From {{$store.state.reservationDateFrom.toISOString().substring(0,10)}} Until {{$store.state.reservationDateUntil.toISOString().substring(0,10)}}</p>
+        <div id="reservation-dates">
+          <p id="p-reservation">
+            From  {{$store.state.reservationDateFrom.getDate()}}-{{$store.state.reservationDateFrom.getMonth()+1}}-{{$store.state.reservationDateFrom.getFullYear()}} 
+          </p>
+          <p id="p-reservation">
+            Until {{$store.state.reservationDateUntil.getDate()}}-{{$store.state.reservationDateUntil.getMonth()+1}}-{{$store.state.reservationDateUntil.getFullYear()}}
+          </p>
+        </div>
         <h4 id="h4-reservation">People</h4>
         <p id="p-reservation">{{$store.state.adults}} Adults</p>
         <p v-if="$store.state.children === '1'" id="p-reservation">{{$store.state.children}} Child</p>
         <p v-else id="p-reservation">{{$store.state.children}} Children</p>
-      
-        
-
       </div>
       <div id="total">
         <h2>Total</h2>
         <h2>{{$store.state.roomPrice}}</h2>
       </div>
       <div id="save-button">
-        <button @click="()=>{}">Save</button>
+        <button @click="$store.commit('setRerservation')">Save</button>
       </div>
     </div>
     <div></div>
@@ -44,6 +49,7 @@ import { Options, Vue } from "vue-class-component";
   
 })
 export default class ReservationSummary extends Vue {
+ 
  
 }
 </script>
@@ -73,7 +79,13 @@ export default class ReservationSummary extends Vue {
   display: flex;
   flex-direction: column;
 }
+#reservation-dates{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
 #p-reservation{
+  margin-right: 1rem;
   margin-block-end: 1rem;
   margin-block-start: 1rem;
 }
