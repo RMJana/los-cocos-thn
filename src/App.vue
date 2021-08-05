@@ -31,7 +31,10 @@ export default class Weddings extends Vue {}
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
-  }
+  display:flex; 
+  flex-direction:column; 
+}
+
 #nav {
   text-align: center;
   color: #2c3e50;

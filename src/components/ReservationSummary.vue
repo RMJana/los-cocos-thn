@@ -45,7 +45,7 @@ export default class ReservationSummary extends Vue {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scope>
 #reservation-summary-container{
   display: flex;
   justify-content: space-between;

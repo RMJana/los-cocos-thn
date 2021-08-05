@@ -40,7 +40,7 @@ import { ref } from 'vue';
 
     return {
       pickedFrom : ref(new Date()),
-      pickedUntil: ref(new Date(new Date().getTime()+(5*24*60*60*1000))),
+      pickedUntil: ref(new Date(new Date().getTime()+(24*60*60*1000))),
       selectedAdult: "1",
       selectedChild: "Child(1)",
     };

@@ -1,4 +1,5 @@
 <template>
+
   <div class="work-in-progress">
     <img id="work-in-progress-img" alt="work-in-progress" src="../assets/work-in-progress.png" />
     <h1>{{ msg }}</h1>
@@ -20,8 +21,14 @@ export default class WorkInProgress extends Vue {
 </script>
 
 <style lang="scss">
-#work-in-progress-img {
- height: 15rem;
+
+.work-in-progress{
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+#work-in-progress-img{
+  height: 38rem;
 }
 </style>
 
