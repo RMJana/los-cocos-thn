@@ -3,7 +3,7 @@ import Home from '../views/Home.vue';
 
 const routes: Array<RouteRecordRaw> = [
   {
-    path: '/',
+    path: '/:promo_code?',
     name: 'Home',
     component: Home,
   },

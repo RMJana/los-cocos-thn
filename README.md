@@ -95,3 +95,8 @@ Try several libraries for select-dropdown component, implement Dropdownselect fr
 Investigate why image src binding is not working solutions: use require('../assets/room_1.png') pro image is also not working (2hours)
 Found a work-around using v-if/v-else-if/v-else (15min)
 Implement Room & Rates section and styling (3hours)
+Implement Reservation Summery and styling (1hour)
+
+### Modify router to accept optional param
+
+Modify the router in order to accept an optional promo_code param (15min)
